@@ -15,7 +15,9 @@ permissions:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on:
+      - self-hosted
+      - 1ES.Pool=MC-Runner-1ES-Linux
     if: github.repository == 'DefinitelyTyped/DefinitelyTyped'
 
     steps:
