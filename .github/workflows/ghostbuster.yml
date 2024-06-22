@@ -19,7 +19,10 @@ jobs:
     permissions:
       contents: write  # for Git to git push
       pull-requests: write  # for peter-evans/create-pull-request to create a PR
-    runs-on: ubuntu-latest
+    runs-on:
+      - self-hosted
+      - 1ES.Pool=MC-Runner-1ES-Linux
+
     if: github.repository == 'DefinitelyTyped/DefinitelyTyped'
 
     steps:
